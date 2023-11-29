@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../stylesheets/styles.css" >
+    <link rel="stylesheet" href="../stylesheets/contact.css">
+    <link rel="icon" href="../images/ML.ico">
+    <script async src="../scripts/form.js"></script>
+    <!--<script type="module" async src="../scripts/lightordark.js"></script>-->
+    <noscript>Your browser does not support JavaScript! 
+        <style>
+            #lightNdark{
+                display: none;
+                }
+            #form-js{
+                display: none;
+            }
+            #form-no-js{
+                display: flex;
+            }
+            body{
+                grid-template-rows: auto auto 1fr auto !important;
+            }
+        </style>
+    </noscript>
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <div id="leftHead">
+                <a class="navLink" href="/pages/EdnWork.html">Education and Work Experience</a>
+                <a class="navLink" href="/pages/Portfolio.html">Portfolio</a>
+            </div>
+            <a class="navLink" id="centerHead" href="../index.html">Maxime Lorang</a>
+            <a class="navLink" id="rightHead" href="/pages/AboutMe.html">About me</a>
+        </nav>
+    </header>
+
+    <main>
+        <form method="post" action="https://httpbin.org/post">
+            <fieldset>
+                <legend>Shoot me a message!</legend>
+                <!--<label for="who">Who are you?</label>
+                <select id="who">
+                    <option value="">--Please choose an option--</option>
+                    <optgroup label="Peer">
+                        <option value="colleague">Colleague</option>
+                        <option value="classmate">Classmate</option>
+                        <option value="fnf">Friend or Family</option>
+                    </optgroup>
+                    <optgroup label="IT worker">
+                        <option value="webdev">Web Developper</option>
+                        <option value="softdev">Software Developper</option>
+                        <option value="cyber">Cybersecurity Engineer</option>
+                        <option value="network">Networks Engineer</option>
+                    </optgroup>
+                    <optgroup label="Other">
+                        <option value="entrepreneur">Entrepreneur</option>
+                        <option value="hr">Human Ressources</option>
+                        <option value="recruit">Recruiter</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="other">Other</option>
+                    </optgroup>
+                </select>
+                <br>
+                
+
+                <label for="continent">Select your continent:</label>
+                <datalist id="continents">
+                    <option value="Africa"></option>
+                    <option value="North America"></option>
+                    <option value="South America"></option>
+                    <option value="Europe"></option>
+                    <option value="Asia"></option>
+                    <option value="Oceania"></option>
+                </datalist>
+                <input list="continents" id="continent">
+                <br>-->
+                
+                <label for="yourname">Name: </label>
+                <input type="text" id="yourname" class="validInput" name="yourname" minlength="3" maxlength="30" placeholder="Your name" required >
+                <output id="yourname-error"></output>
+                <output id="yourname-info"></output>
+                <br>
+
+                <label for="email">Email address: </label>
+                <input type="email" id="email" class="validInput" name="email" minlength="6", maxlength="50", placeholder="email@example.com" required pattern="[A-Za-z0-9.-]+@[A-Za-z0-9.-].[A-Za-z]">
+                <output id="email-error"></output>
+                <output id="email-info"></output>
+                <br>
+
+                <label for="inputText">Your message:</label>
+                <textarea name="comments" id="comments" class="validInput" minlength="10" maxlength="250" placeholder="250 caracters max"></textarea>
+                <output id="comments-error"></output>
+                <output id="comments-info"></output>
+                <p id="count" style="visibility: hidden;">250</p>
+                <br>
+                <input type="hidden" name="possible_bot" id="possible_bot" value="true">
+                <input type="hidden" name="form-errors" id="form-errors">
+                <button type="submit" id="submitButton" class="submitButton">Send</button>
+                
+            </fieldset>
+        </form>
+
+        <div>
+            <pre>
+
+
+
+                       ..--""|
+                       |     |
+                       | .---'
+                 (\-.--| |---------.
+                / \) \ | |          \
+                |:.  | | |           |
+                |:.  | |o|           |
+                |:.  | `"`           |
+                |:.  |_ __  __ _  __ /
+                `""""`""|=`|"""""""`
+                        |=_|
+                        |= |
+                        |= |
+                        |= |
+                        |= |
+                        |= |
+                        |= |
+                        |= |
+                        |= |
+                        |= |
+            </pre>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <hr>
+            <nav>
+            <a class="navLink footerLeft" id="" href="https://www.linkedin.com/in/maxime-lorang/">
+                    <img src="/images/linkedin.ico" id="linksun" alt="Linkedin" height="25">
+                    <img src="/images/linkedin-white.ico" id="linkmoon" alt="Linkedin" height="25">
+            </a>
+
+            <div class="footerRight">
+                <a class="navLink contactRight" id="form-js" href="/pages/contact.html">Contact</a>
+                <a class="navLink contactRight" id="form-no-js" href="/pages/form-no-js.html">Contact</a>
+                <div class="dayNnight">
+                    <label class="switch">
+                        <input id="lightNdark" type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                    <!--<button >-->
+                        <img src="/images/sun.ico"  id="sun" alt="Sun" height="25">
+                        <img src="/images/moon.ico"  id="moon" alt="Moon" height="25">
+                    <!--</button>-->
+            </div>
+            </div>
+        </nav>
+    </footer>
+    <script>
+        const btn = document.getElementById("lightNdark");
+        if(localStorage.getItem("dark") == "true"){
+            document.documentElement.classList.toggle("dark");
+            document.getElementById("sun").style.display = "none";
+            document.getElementById("linksun").style.display = "none";
+            document.getElementById("moon").style.display = "flex";
+            document.getElementById("linkmoon").style.display = "flex";
+            btn.checked = true;
+        }
+
+        else if (localStorage.setItem("dark", "false")){
+            document.getElementById("sun").style.display = "flex";
+            document.getElementById("linksun").style.display = "flex";
+            document.getElementById("moon").style.display = "none";
+            document.getElementById("linkmoon").style.display = "none";
+            btn.checked = false;
+        }
+
+        btn.addEventListener("click", function(){
+            if (document.documentElement.classList.toggle("dark")){
+                document.getElementById("sun").style.display = "none";
+                document.getElementById("linksun").style.display = "none";
+                document.getElementById("moon").style.display = "flex";
+                document.getElementById("linkmoon").style.display = "flex";
+                localStorage.setItem("dark", "true");
+            }
+            else{
+                document.getElementById("sun").style.display = "flex";
+                document.getElementById("linksun").style.display = "flex";
+                document.getElementById("moon").style.display = "none";
+                document.getElementById("linkmoon").style.display = "none";
+                localStorage.setItem("dark", "false");
+            }
+        })
+
+    </script>
+</body>
+
+
+
+
+
+
+</html>

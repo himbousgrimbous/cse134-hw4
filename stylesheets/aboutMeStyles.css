@@ -1,0 +1,34 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid var(--inputColor);
+
+    width: 100%;
+
+    caption-side: bottom;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+    border: solid;
+    border-color: #ffffff;
+}
+
+tr:nth-child(even){ 
+    background-color: #f2f2f2;
+    color: gray;
+}
+
+math{
+    text-align: center;
+}
+
+#einstein {
+    justify-self: center;
+    color: color-mix(in srgb, purple 25%, white);;
+    background-color: grey;
+
+    perspective: 500px;
+}
+

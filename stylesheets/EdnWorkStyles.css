@@ -1,0 +1,15 @@
+
+@media screen and (min-width: 1024px) and (min-aspect-ratio: 1.28/1){
+    main {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 20px 4fr 20px;
+        
+        overflow: auto;
+    }
+
+}
+
+/*This layout is what I found worked best for all screen sizes*/
+
+/*(min-aspect-ratio: 1.4/1) and (max-aspect-ratio: 2.5/1)*/

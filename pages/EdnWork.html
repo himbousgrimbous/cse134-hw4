@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Education and Work Experience</title>
+    <link rel="stylesheet" href="../stylesheets/EdnWorkStyles.css" >
+    <link rel="stylesheet" href="../stylesheets/styles.css" >
+    <link rel="icon" href="../images/ML.ico">
+    <!--<script type="module" async src="../scripts/lightordark.js"></script>-->
+    <noscript>Your browser does not support JavaScript! 
+        <style>
+            #lightNdark{
+                display: none;
+                }
+            #form-js{
+                display: none;
+            }
+            #form-no-js{
+                display: flex;
+            }
+            body{
+                grid-template-rows: auto auto 1fr auto !important;
+            }
+        </style>
+    </noscript>
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <div id="leftHead">
+                <a class="navLink" href="/pages/EdnWork.html">Education and Work Experience</a>
+                <a class="navLink" href="/pages/Portfolio.html">Portfolio</a>
+            </div>
+            <a class="navLink" id="centerHead" href="../index.html">Maxime Lorang</a>
+            <a class="navLink" id="rightHead" href="/pages/AboutMe.html">About me</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <section>
+            <h2 id="education">Education</h2>
+
+            <article>
+                <h3>2023: UCSD</h3>
+
+                <p><i>San Diego, CA, USA</i>
+                    <br>
+                    Exchange program at UC San Diego.
+                </p>
+
+                <p>Courses followed:</p>
+                <ul>
+                    <li>CSE-134B - <strong>Web Client Programming</strong></li>
+                    <li>CSE-123 - <strong>Computer Networks</strong></li>
+                    <li>CSE-127 - <strong>Intro to Computer security</strong></li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>2020-2025: ESME</h3>
+                <p><i>Paris, France</i>
+                    <br>
+                    I have studied engineering in the <strong>International Section</strong>
+                     for the past three years, and I will major in <strong>Cybersecurity</strong> for my Master's Degree.
+                    </p>
+                </article>
+
+            <article>
+                <h3>2019-2020: Yeats College</h3>
+                <p><i>Galway, Ireland</i>
+                    <br>
+                    Graduated from the Leaving Certificate with honours.
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Work Experience</h2>
+
+            <article>
+                <h3>Aug 2023: Oleron Stand up Paddle</h3>
+                <p><i>Oleron Island, France</i>
+                    <br>
+                    <i>Summer job</i>
+                    <br> 
+                    I was in charge of welcoming clients,
+                    handling payments and reservations, and giving safety briefings.
+                </p>
+                </article>
+
+            <article>
+                <h3>May-Jul 2023: Pavillon des Tuileries</h3>
+                <p><i>Paris, France</i>
+                    <br>
+                    <i>Summer job</i>
+                    <br>
+                    Waiter in a cafe located in the Jardin des Tuileries.
+                </p>
+            </article>
+
+            <article>
+                <h3>Jan-Jul 2023: Cargonautes</h3>
+                <p><i>Paris, France
+                    </i>
+                    <br>
+                    <i>Student job</i>
+                    <br>Bike messenger for an Eco-Responsible bike messenger union.
+                </p>
+            </article>
+
+            <article>
+                <h3>Apr-Jul 2022: COURIIER</h3>
+                <p><i>Paris, France</i>
+                    <br>
+                    <i>Work Experience internship</i>
+                    <br>
+                    Logistics manager and bike messenger.
+                </p>
+            </article>
+
+        </section>
+    </main>
+
+
+    <footer>
+        <hr>
+            <nav>
+            <a class="navLink footerLeft" id="" href="https://www.linkedin.com/in/maxime-lorang/">
+                    <img src="/images/linkedin.ico" id="linksun" alt="Linkedin" height="25">
+                    <img src="/images/linkedin-white.ico" id="linkmoon" alt="Linkedin" height="25">
+            </a>
+
+            <div class="footerRight">
+                <a class="navLink contactRight" id="form-js" href="/pages/contact.html">Contact</a>
+                <a class="navLink contactRight" id="form-no-js" href="/pages/form-no-js.html">Contact</a>
+                <div class="dayNnight">
+                    <label class="switch">
+                        <input id="lightNdark" type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                    <!--<button >-->
+                        <img src="/images/sun.ico"  id="sun" alt="Sun" height="25">
+                        <img src="/images/moon.ico"  id="moon" alt="Moon" height="25">
+                    <!--</button>-->
+            </div>
+            </div>
+        </nav>
+    </footer>
+    <script>
+        const btn = document.getElementById("lightNdark");
+        if(localStorage.getItem("dark") == "true"){
+            document.documentElement.classList.toggle("dark");
+            document.getElementById("sun").style.display = "none";
+            document.getElementById("linksun").style.display = "none";
+            document.getElementById("moon").style.display = "flex";
+            document.getElementById("linkmoon").style.display = "flex";
+            btn.checked = true;
+        }
+
+        else if (localStorage.setItem("dark", "false")){
+            document.getElementById("sun").style.display = "flex";
+            document.getElementById("linksun").style.display = "flex";
+            document.getElementById("moon").style.display = "none";
+            document.getElementById("linkmoon").style.display = "none";
+            btn.checked = false;
+        }
+
+        btn.addEventListener("click", function(){
+            if (document.documentElement.classList.toggle("dark")){
+                document.getElementById("sun").style.display = "none";
+                document.getElementById("linksun").style.display = "none";
+                document.getElementById("moon").style.display = "flex";
+                document.getElementById("linkmoon").style.display = "flex";
+                localStorage.setItem("dark", "true");
+            }
+            else{
+                document.getElementById("sun").style.display = "flex";
+                document.getElementById("linksun").style.display = "flex";
+                document.getElementById("moon").style.display = "none";
+                document.getElementById("linkmoon").style.display = "none";
+                localStorage.setItem("dark", "false");
+            }
+        })
+
+    </script>
+</body>
+
+
+
+
+
+</html>

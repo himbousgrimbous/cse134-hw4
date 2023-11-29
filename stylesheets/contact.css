@@ -1,0 +1,79 @@
+fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding:1rem;
+}
+
+legend{
+    font-size: larger;
+    font-weight: 500;
+}
+
+input, textarea{
+    font-family: inherit;
+    border:solid var(--borderColor) 0.5px;
+    margin:10px;
+    padding: 0.5rem;
+    height: 2rem;
+    width:auto;
+}
+
+textarea {
+    resize: none;
+ }
+
+p{
+    margin-left:10px;
+    width:auto;
+}
+
+input,textarea, #submitButton{
+    background-color: var(--inputColor);
+    border:solid var(--borderColor) 0.5px;
+     
+}
+
+::placeholder{
+    color: var(--hfColor);
+}
+
+#submitButton{
+    margin:10px;
+    width: 15rem;
+    height: 2rem;
+    transition: color 0.3s;
+}
+#submitButton:hover{
+    color: var(--inputColor);
+    background-color: var(--hfColor);
+}
+
+
+.validInput{
+    color: var(--hfFontColor);
+    background-color: var(--inputColor);
+}
+
+.invalidInput{
+    color: var(--hfFontColor);
+    background-color: lightcoral;
+
+}
+.invalid{
+    color:lightcoral;
+}
+
+.error {
+    border:solid var(--borderColor) 0.5px;
+    margin:10px;
+    padding: 0.5rem;
+    height: 2rem;
+    width:auto;
+    color: var(--hoverColor);
+    background-color: red;
+}
+
+.valid{
+    display: none;
+}

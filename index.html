@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Maxime Lorang's Website</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
+    <link rel="icon" href="../images/ML.ico">
+    <!--<script type="module" async src="../scripts/lightordark.js"></script>-->
+    <noscript>Your browser does not support JavaScript! 
+        <style>
+            #lightNdark{
+                display: none;
+                }
+            #form-js{
+                display: none;
+            }
+            #form-no-js{
+                display: flex;
+            }
+            body{
+                grid-template-rows: auto auto 1fr auto !important;
+            }
+           
+        </style>
+    </noscript>
+
+
+    <style>
+        /*
+        .Background{
+        background-image: url('../images/homePageBackground.jpg');
+
+        background-repeat: no-repeat;
+
+        background-size: cover;
+        height: auto;
+
+        }
+        will be replaced by something else
+        */
+
+    </style>
+
+    
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <div id="leftHead">
+                <a class="navLink" href="/pages/EdnWork.html">Education and Work Experience</a>
+                <a class="navLink" href="/pages/Portfolio.html">Portfolio</a>
+            </div>
+            <a class="navLink" id="centerHead" style="visibility: hidden;" href="../index.html">Maxime Lorang</a>
+            <a class="navLink" id="rightHead" href="/pages/AboutMe.html">About me</a>
+        </nav>
+    </header>
+
+    <main id="mainHomePage" class="Background">
+        <section id="bordersHomePage">
+            <aside id="myNameHomePage">
+                <h1><strong>Maxime Lorang</strong></h1>
+                <h1>Cybersecurity Student</h1>
+            </aside>                
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+            <nav>
+            <a class="navLink footerLeft" id="" href="https://www.linkedin.com/in/maxime-lorang/">
+                    <img src="/images/linkedin.ico" id="linksun" alt="Linkedin" height="25">
+                    <img src="/images/linkedin-white.ico" id="linkmoon" alt="Linkedin" height="25">
+            </a>
+
+            <div class="footerRight">
+                <a class="navLink contactRight" id="form-js" href="/pages/contact.html">Contact</a>
+                <a class="navLink contactRight" id="form-no-js" href="/pages/form-no-js.html">Contact</a>
+                <div class="dayNnight">
+                    <label class="switch">
+                        <input id="lightNdark" type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                    <!--<button >-->
+                        <img src="/images/sun.ico"  id="sun" alt="Sun" height="25">
+                        <img src="/images/moon.ico"  id="moon" alt="Moon" height="25">
+                    <!--</button>-->
+            </div>
+            </div>
+        </nav>
+    </footer>
+    <script>
+        const btn = document.getElementById("lightNdark");
+        if(localStorage.getItem("dark") == "true"){
+            document.documentElement.classList.toggle("dark");
+            document.getElementById("sun").style.display = "none";
+            document.getElementById("linksun").style.display = "none";
+            document.getElementById("moon").style.display = "flex";
+            document.getElementById("linkmoon").style.display = "flex";
+            btn.checked = true;
+        }
+
+        else if (localStorage.setItem("dark", "false")){
+            document.getElementById("sun").style.display = "flex";
+            document.getElementById("linksun").style.display = "flex";
+            document.getElementById("moon").style.display = "none";
+            document.getElementById("linkmoon").style.display = "none";
+            btn.checked = false;
+        }
+
+        btn.addEventListener("click", function(){
+            if (document.documentElement.classList.toggle("dark")){
+                document.getElementById("sun").style.display = "none";
+                document.getElementById("linksun").style.display = "none";
+                document.getElementById("moon").style.display = "flex";
+                document.getElementById("linkmoon").style.display = "flex";
+                localStorage.setItem("dark", "true");
+            }
+            else{
+                document.getElementById("sun").style.display = "flex";
+                document.getElementById("linksun").style.display = "flex";
+                document.getElementById("moon").style.display = "none";
+                document.getElementById("linkmoon").style.display = "none";
+                localStorage.setItem("dark", "false");
+            }
+        })
+
+    </script>
+</body>
+
+
+
+
+
+
+</html>
